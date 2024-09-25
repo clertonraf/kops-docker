@@ -1,12 +1,6 @@
-# set a .env file with
-# PORT=
-# LICENSE_FILE=
-#
-# and run docker-compose --build
-
 services:
   kops:
-    build: .
+    image: clertonraf/kops-docker:latest
     ports:
       - "${PORT}:9090"
     volumes:
