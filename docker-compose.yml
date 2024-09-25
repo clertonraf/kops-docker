@@ -1,0 +1,13 @@
+# set a .env file with
+# PORT=
+# LICENSE_FILE=
+#
+# and run docker-compose --build
+
+services:
+  kops:
+    build: .
+    ports:
+      - "${PORT}:9090"
+    volumes:
+      - ${LICENSE_FILE}:/opt/kops/kops.lic
