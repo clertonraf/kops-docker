@@ -49,7 +49,7 @@ docker exec -it kops /bin/bash
 
 ## TODO
 
-- [] Pre-configured environment
-- [] Healthcheck
-- [] TLS support
-- [] External log access
+- [ ] Pre-configured environment
+- [ ] Healthcheck
+- [ ] TLS support
+- [ ] External log access
