@@ -37,4 +37,4 @@ docker compose --env-file .env up
 docker compose --env-file .env up -d
 ```
 
-5. Access the KoPS at http://localhost:9090
+5. Access the KoPS at http://localhost:9090/KoPS/web
