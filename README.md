@@ -53,3 +53,5 @@ docker exec -it kops /bin/bash
 - [ ] Healthcheck
 - [ ] TLS support
 - [ ] External log access
+
+<a href="https://www.buymeacoffee.com/clertonraf" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
