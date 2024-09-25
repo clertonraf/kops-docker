@@ -11,20 +11,19 @@ jobs:
       attestations: write
       deployments: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.7
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
+      - name: Docker
+        uses: docker/login-action@v3.3.0
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build the kops-docker Docker image
-        run: docker build . --tag ghcr.io/clertonraf/kops-docker:latest
+      - name: Build the clertonraf/kops-docker Docker image
+        run: docker build . --tag clertonraf/kops-docker:latest
 
       - name: Run docker image
-        run: docker run ghcr.io/clertonraf/kops-docker:latest
+        run: docker run clertonraf/kops-docker:latest
 
       - name: Push docker image
-        run: docker push ghcr.io/clertonraf/kops-docker:latest
+        run: docker push clertonraf/kops-docker:latest
