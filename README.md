@@ -2,10 +2,10 @@
 
 ## Premisses
 
-This image uses:
+In this image:
 
 - openjdk 11
-- Toolkit available at https://fachportal.gematik.de/toolkit/kops
+- Toolkit available at [https://fachportal.gematik.de/toolkit/kops](https://fachportal.gematik.de/toolkit/kops)
 - KoPS-Packet (21.06.22)
 
 ## Usage
@@ -37,4 +37,19 @@ docker compose --env-file .env up
 docker compose --env-file .env up -d
 ```
 
-5. Access the KoPS at http://localhost:9090/KoPS/web
+5. Access the KoPS at [hhtp://localhost:9090/Kops/web](http://localhost:9090/KoPS/web)
+
+## Accessing the container
+
+By accessing the container, you can check the logs and other files
+
+```bash
+docker exec -it kops /bin/bash
+```
+
+## TODO
+
+- [] Pre-configured environment
+- [] Healthcheck
+- [] TLS support
+- [] External log access

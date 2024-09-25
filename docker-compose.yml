@@ -1,6 +1,7 @@
 services:
   kops:
     image: clertonraf/kops-docker:latest
+    container_name: kops
     ports:
       - "${PORT}:9090"
     volumes:
