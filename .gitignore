@@ -1,0 +1,5 @@
+# license files
+*.lic
+
+# environment files
+.env
