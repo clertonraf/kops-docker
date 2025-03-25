@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y unzip && \
     rm /tmp/kops.zip
 
 # Make the start.sh script executable
-RUN chmod u+x /opt/kops/start.sh
+RUN chmod u+x -R /opt/kops
 
 # Expose the port (default to 9090 if not set)
 ENV PORT 9090
