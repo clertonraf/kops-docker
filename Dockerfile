@@ -15,10 +15,7 @@ RUN apt-get update && apt-get install -y unzip && \
 # Make the start.sh script executable
 RUN chmod u+x /opt/kops/start.sh
 
-# Expose the port (default to 9090 if not set)
-ENV PORT 9090
-EXPOSE $PORT
+EXPOSE 8080 443
 
 # Run the start.sh script with the specified port
-CMD ["/bin/bash", "-c", "/opt/kops/start.sh $PORT && exec /bin/bash"]
-
+CMD ["/bin/bash", "-c", "/opt/kops/start.sh && exec /bin/bash"]
